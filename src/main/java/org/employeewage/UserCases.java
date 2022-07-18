@@ -1,8 +1,15 @@
 package org.employeewage;
 
 public class UserCases {
-    static int Is_full_time=1;
+    //Assume Full Day Hour is 8
+    private static final int fullDayHour = 8;
+    //Assume part-time Hour is 4;
+    private static final int partTime = 4;
+    //Assume Wage per Hour is 20
+    private static final int wagePerHour = 20;
     //Checks weather Employee is present or not.
+    private static final int Is_full_time=1;
+    private static final int Is_Part_Time = 2;
     public void empChecker(){
         double empcheck= Math.floor(Math.random()*10)%2;
         if(empcheck==Is_full_time){
@@ -13,4 +20,13 @@ public class UserCases {
         }
 
     }
+    public void dailyWage(){
+        double empcheck= Math.floor(Math.random()*10)%2;
+        if(empcheck==Is_full_time){
+            int dailywage= fullDayHour*wagePerHour;
+            System.out.println("Daily  Wage is "+dailywage);
+        }
+    }
+
+
 }
