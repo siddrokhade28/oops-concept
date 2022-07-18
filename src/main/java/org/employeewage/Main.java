@@ -5,5 +5,7 @@ public class Main {
         System.out.println("----------Welcome to Employee Wage Computation Program----------");
         UserCases userCases = new UserCases();
         userCases.empChecker();
+        userCases.dailyWage();
+
     }
 }
