@@ -9,6 +9,8 @@ public class UserCases {
     private static final int wagePerHour = 20;
     //Assume 20 Working Day per Month
     private static final int workingdays = 20;
+    //total working hours is 100
+    private static final int totalHours = 100;
 
     private static final int Is_full_time=1;
     private static final int Is_Part_Time = 2;
@@ -91,8 +93,29 @@ public class UserCases {
             System.out.println("Monthly Wage Wage is 0");
         }
         System.out.println("---------------------------");
-
-        
     }
-
+    public void wages(){
+        int workingDays=0;
+        int workingHours=0;
+        double wage=0;
+        double empcheck= Math.floor(Math.random()*10)%3;
+        while(workingDays<=20 && workingHours<=100){
+            switch ((int)empcheck){
+                case 0:
+                    System.out.println("employee is absent");
+                    System.exit(0);
+                    break;
+                case 1:
+                    workingDays++;
+                    workingHours +=8;
+                    break;
+                case 2:
+                    workingDays++;
+                    workingHours +=4;
+                    break;
+            }
+            wage=workingHours*wagePerHour;
+        }
+        System.out.println("total wage "+wage);
+    }
 }

@@ -9,6 +9,7 @@ public class Main {
         userCases.partTimeWage();
         userCases.usingSwitchCase();
         userCases.monthlyWage();
+        userCases.wages();
 
     }
 }
