@@ -6,6 +6,7 @@ public class Main {
         UserCases userCases = new UserCases();
         userCases.empChecker();
         userCases.dailyWage();
+        userCases.partTimeWage();
 
     }
 }
