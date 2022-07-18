@@ -7,6 +7,8 @@ public class Main {
         userCases.empChecker();
         userCases.dailyWage();
         userCases.partTimeWage();
+        userCases.usingSwitchCase();
+        userCases.monthlyWage();
 
     }
 }
