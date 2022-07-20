@@ -8,17 +8,26 @@ public class AddessBookApp {
         addressBook operations = new addressBookOperation();
         while (true) {
             System.out.println("Enter 1 to add the contact");
-            System.out.println("Enter 2 to exit");
+            System.out.println("Enter 2 to Edit a contact by name");
+            System.out.println("Enter 3 to Delete a contact by name");
+            System.out.println("Enter 4 to display all contact");
+
             int input = sc.nextInt();
             switch (input) {
                 case 1:
                     operations.addContact();
                     break;
                 case 2:
+                    System.out.println("Enter the contact name to be edited");
                     String name = sc.next();
                     operations.editContact(name);
                     break;
                 case 3:
+                    System.out.println("Enter the contact name to be edited");
+                    name = sc.next();
+                    operations.editContact(name);
+                    break;
+                case 4:
                     operations.daiplayAll();
                     break;
                 default:
