@@ -93,20 +93,24 @@ public class addressBookOperation implements addressBook {
         if(flag==false){
             System.out.println("Contact not present in the book");
         }
-        System.out.println(contactList);
+        //System.out.println(contactList);
     }
 
-//    @Override
-//    public void deleteContact(String firstname) {
-//        boolean flag= false;
-//        for(Contacts contact : contactList) {
-//            if (contact.getFirstName().equals(firstname)) {
-//                flag = true;
-//                contactList.remove(contact);
-//            }
-//        }
-//
-//    }
+    @Override
+    public void deleteContact(String firstname) {
+        boolean flag= false;
+        for(Contacts contact : contactList) {
+            if (contact.getFirstName().equals(firstname)) {
+                flag = true;
+                contactList.remove(contact);
+                System.out.println("Contact Deleted");
+            }
+        }
+        if(flag==false){
+            System.out.println("Contact not present in the book");
+        }
+
+    }
 
     @Override
     public void daiplayAll() {

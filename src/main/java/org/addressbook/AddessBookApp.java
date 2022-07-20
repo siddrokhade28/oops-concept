@@ -25,7 +25,7 @@ public class AddessBookApp {
                 case 3:
                     System.out.println("Enter the contact name to be edited");
                     name = sc.next();
-                    operations.editContact(name);
+                    operations.deleteContact(name);
                     break;
                 case 4:
                     operations.daiplayAll();
