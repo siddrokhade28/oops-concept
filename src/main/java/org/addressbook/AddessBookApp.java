@@ -11,6 +11,7 @@ public class AddessBookApp {
             System.out.println("Enter 2 to Edit a contact by name");
             System.out.println("Enter 3 to Delete a contact by name");
             System.out.println("Enter 4 to display all contact");
+            System.out.println("Enter any other number to exit");
 
             int input = sc.nextInt();
             switch (input) {
@@ -31,6 +32,7 @@ public class AddessBookApp {
                     operations.daiplayAll();
                     break;
                 default:
+                    System.exit(0);
                     break;
             }
         }
