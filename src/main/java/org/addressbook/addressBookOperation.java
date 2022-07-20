@@ -7,15 +7,15 @@ public class addressBookOperation implements addressBook {
     ArrayList<Contacts> contactList = new ArrayList();
     Contacts contacts=new Contacts();
     Scanner sc = new Scanner(System.in);
+    //to set the contacts and storing them in ArrayList
     @Override
     public void addContact() {
         System.out.println("Enter First Name");
         String firstName = sc.next();
         System.out.println("Enter Last Name");
         String lastName = sc.next();
-        sc.nextLine();
         System.out.println("Enter Address");
-        String address = sc.nextLine();
+        String address = sc.next();
         System.out.println("Enter City");
         String city = sc.next();
         System.out.println("Enter State");
@@ -31,7 +31,7 @@ public class addressBookOperation implements addressBook {
 
         System.out.println(contactList);
     }
-
+//to Edit a contct by name
     @Override
     public void editContact(String firstName) {
         boolean flag= false;
@@ -95,7 +95,7 @@ public class addressBookOperation implements addressBook {
         }
         //System.out.println(contactList);
     }
-
+//to delete a contact by name
     @Override
     public void deleteContact(String firstname) {
         boolean flag= false;
@@ -104,6 +104,7 @@ public class addressBookOperation implements addressBook {
                 flag = true;
                 contactList.remove(contact);
                 System.out.println("Contact Deleted");
+                break;
             }
         }
         if(flag==false){
@@ -111,7 +112,7 @@ public class addressBookOperation implements addressBook {
         }
 
     }
-
+//to display all contacts
     @Override
     public void daiplayAll() {
         System.out.println(contactList);
