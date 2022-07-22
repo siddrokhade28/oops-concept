@@ -1,5 +1,8 @@
 package org.employeeusingiterface;
 
+import org.addressbook.Contacts;
+
+import java.util.ArrayList;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -8,7 +11,6 @@ public class EmployeeApp {
         Scanner scanner = new Scanner(System.in);
         System.out.println("----------Welcome to Employee Wage Computation Program----------");
         //taking the company name
-        //boolean flag =true;
         while (true) {
             System.out.println("Enter the Company Name");
             String companyName = scanner.nextLine();
@@ -35,7 +37,6 @@ public class EmployeeApp {
             scanner.nextLine();
             if(status.equals("NO")){
                 System.out.println("Thank you for using Employee Wage Computation Program");
-                //flag=false;
                 break;
 
             }
