@@ -10,11 +10,15 @@ public class EmployeeMain {
         //taking user inputs as per the menu
         while (true) {
             System.out.println("press 1 to E add a company details");
+            System.out.println("press 2 to show all companies");
 
             int ch= scanner.nextInt();
             switch (ch){
                 case 1:
                     employee.addCompany();
+                    break;
+                case 2:
+                    employee.DisplayAllComp();
                     break;
 
             }

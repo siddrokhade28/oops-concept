@@ -26,6 +26,12 @@ public class EmployeeImpl implements Employee {
         employeList.add(employe);
         System.out.println(employeList);
     }
+    @Override
+    public void DisplayAllComp() {
+        for(Employe employe:employeList){
+            System.out.println(employe);
+        }
+    }
 
 }
 

@@ -72,6 +72,15 @@ public class Employe {
         this.monthlyWage = monthlyWage;
     }
 
-
-
+    @Override
+    public String toString() {
+        return "Employe{" +
+                "company='" + company + '\'' +
+                ", wagePerHour=" + wagePerHour +
+                ", totalWorkingDays=" + totalWorkingDays +
+                ", fullDayHour=" + fullDayHour +
+                ", dailyWage=" + dailyWage +
+                ", monthlyWage=" + monthlyWage +
+                '}';
+    }
 }
