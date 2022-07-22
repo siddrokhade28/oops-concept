@@ -9,6 +9,7 @@ public class EmployeeImpl implements Employee {
     List<Employe> employeList = new ArrayList<>();
     Employe employe = new Employe();
    CalculateWages cg = new CalculateWages();
+   //function to add company details
     @Override
     public void addCompany() {
         System.out.println("Enter the Company Name");
@@ -26,12 +27,28 @@ public class EmployeeImpl implements Employee {
         employeList.add(employe);
         System.out.println(employeList);
     }
+    //function to display all companies
     @Override
     public void DisplayAllComp() {
         for(Employe employe:employeList){
             System.out.println(employe);
         }
     }
+    //function to display wage of specific company
+    @Override
+    public void ShowWage(String company) {
+        for(Employe employe:employeList){
+            if(employe.getCompany().equals(company)){
+                System.out.println("The total Wage of the Company  " + company + " for a month is " + employe.getMonthlyWage() );
+                System.out.println("The total Wage of the Company  " + company + " for a day is " + employe.getDailyWage() );
+
+            }
+            else {
+                System.out.println("Company  not found");
+            }
+        }
+    }
+
 
 }
 

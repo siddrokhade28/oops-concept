@@ -11,7 +11,7 @@ public class EmployeeMain {
         while (true) {
             System.out.println("press 1 to E add a company details");
             System.out.println("press 2 to show all companies");
-
+            System.out.println("press 3 to compute total wage of a Specific company");
             int ch= scanner.nextInt();
             switch (ch){
                 case 1:
@@ -19,6 +19,11 @@ public class EmployeeMain {
                     break;
                 case 2:
                     employee.DisplayAllComp();
+                    break;
+                case 3:
+                    System.out.println("Enter the company name");
+                    String companyName= scanner.next();
+                    employee.ShowWage(companyName);
                     break;
 
             }
