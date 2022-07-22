@@ -6,9 +6,6 @@ public class EmployeeImpl implements Employee {
     int fullDayHour ;
     int wagePerHour ;
 
-    public EmployeeImpl() {
-
-    }
 
     public EmployeeImpl(int wagePerHour, int workingdays, int fullDayHour){
         this.fullDayHour=fullDayHour;
