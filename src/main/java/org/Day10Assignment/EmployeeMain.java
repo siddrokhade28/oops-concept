@@ -12,6 +12,8 @@ public class EmployeeMain {
             System.out.println("press 1 to E add a company details");
             System.out.println("press 2 to show all companies");
             System.out.println("press 3 to compute total wage of a Specific company");
+            System.out.println("press 4 to delete a company to exit");
+            System.out.println("press 5 to exit");
             int ch= scanner.nextInt();
             switch (ch){
                 case 1:
@@ -24,6 +26,10 @@ public class EmployeeMain {
                     System.out.println("Enter the company name");
                     String companyName= scanner.next();
                     employee.ShowWage(companyName);
+                    break;
+                case 4:
+                    employee.deleteCompany();
+                case 5:
                     break;
 
             }

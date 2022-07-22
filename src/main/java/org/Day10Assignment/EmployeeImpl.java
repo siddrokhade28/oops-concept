@@ -48,7 +48,27 @@ public class EmployeeImpl implements Employee {
             }
         }
     }
-
+//function to delete a company
+    @Override
+    public void deleteCompany() {
+        if (employeList.isEmpty()) {
+            System.out.println("No companies added");
+        }
+        else {
+        System.out.println("the list of companies are: \n");
+        for (Employe employe : employeList) {
+            System.out.println(employe.getCompany());
+        }
+        System.out.println("Enter the company name to be deleted\n");
+        String company = scanner.next();
+            for (Employe employe : employeList) {
+                if (employe.getCompany().equals(company)) {
+                    employeList.remove(employe);
+                    System.out.println(company+" Deleted Successfully");
+                }
+            }
+        }
+    }
 
 }
 
