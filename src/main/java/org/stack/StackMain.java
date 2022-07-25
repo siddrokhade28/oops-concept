@@ -1,5 +1,7 @@
 package org.stack;
-
+/*
+main class to carry out the stack operations
+ */
 public class StackMain {
     public static void main(String[] args) {
         StackOperation operation = new StackOperation();
@@ -7,5 +9,6 @@ public class StackMain {
         operation.push(30);
         operation.push(56);
         operation.displayData();
+        operation.peak();
     }
 }
