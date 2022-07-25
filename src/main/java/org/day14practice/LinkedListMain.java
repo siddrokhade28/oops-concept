@@ -20,7 +20,10 @@ public class LinkedListMain {
         operation.add(73);
         operation.add(98);
         operation.showData();
-        operation.delete(98);
+        operation.popLast();
+        operation.popLast();
+        operation.popLast();
+
         System.out.println();
         operation.showData();
 //        System.out.println( operation.search(30));

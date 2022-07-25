@@ -1,5 +1,7 @@
 package org.day14practice;
 
+import java.util.Collections;
+
 public class LinkedListOperation {
     Node head, tail;
 
@@ -57,22 +59,26 @@ public class LinkedListOperation {
     }
 
     // function to delete last data
-//    public Object popLast() {
-//        Node temp =head ,prevdata= head;
-//        Object value=null;
-//            while (temp != null)
-//            {
-//                if (temp.getNext() == null) {
-//                    value = temp.getData();
-//                    prevdata.setNext(null);
-//                    break;
-//                }
-//                temp= temp.getNext();
-//
-//            }
-//        return value;
-//    }
-//    // function to search an object in the list
+    public void popLast() {
+        Node temp = head;
+        Node prev = head;
+        if (head.getNext()==null) {
+            head = null;
+        } else {
+            temp = temp.getNext();
+            while (temp != null) {
+                if (temp.getNext() == null) {
+                    prev.setNext(null);
+                    break;
+                }
+                prev = temp;
+                temp = temp.getNext();
+            }
+        }
+
+    }
+
+    //    // function to search an object in the list
     public int search(Object data) {
         int index = 0;
         Node temp = head;
@@ -87,23 +93,23 @@ public class LinkedListOperation {
 
         return index;
     }
-    // function to delete a Data anywhere in the list
-    public void delete(Object data){
-        Node temp =head;
-        Node prev = head;
-        if(head.getData().equals(data)){
-            head= head.getNext();
-        }
-        else {
-            temp= temp.getNext();
 
-            while (temp!= null){
-                if(temp.getData().equals(data)){
+    // function to delete a Data anywhere in the list
+    public void delete(Object data) {
+        Node temp = head;
+        Node prev = head;
+        if (head.getData().equals(data)) {
+            head = head.getNext();
+        } else {
+            temp = temp.getNext();
+
+            while (temp != null) {
+                if (temp.getData().equals(data)) {
                     prev.setNext(temp.getNext());
                     break;
                 }
-                prev =temp;
-                temp=temp.getNext();
+                prev = temp;
+                temp = temp.getNext();
             }
         }
 
