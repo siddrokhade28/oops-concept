@@ -14,7 +14,7 @@ public class LinkedListOperation {
             head=node;
         }
     }
-    // Function used to dispplay all the object sof List
+    // Function used to display all the object sof List
     public void  showData(){
         Node temp=head;
         if(head==null){
@@ -26,6 +26,19 @@ public class LinkedListOperation {
                 temp= temp.getNext();
             }
             System.out.println();
+        }
+    }
+    // function to insert data in between
+    public void insert(Object preData , Object data){
+        Node temp = head;
+        Node node= new Node(data);
+        while (temp!=null) {
+            if(temp.getData().equals(preData)){
+                node.setNext(temp.getNext());
+                temp.setNext(node);
+                break;
+            }
+            temp= temp.getNext();
         }
     }
 //    public Object pop(){
