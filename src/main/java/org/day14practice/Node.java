@@ -1,17 +1,20 @@
 package org.day14practice;
 
 public class Node {
+    // creating a node class
     private Object data;
     private Node next;
 
     public Node() {
     }
 
+    // initialize the node
     public Node(Object data) {
         this.data = data;
         this.next = null;
     }
 
+    //setters and getters for the data and next
     public Object getData() {
         return data;
     }
