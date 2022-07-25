@@ -1,4 +1,4 @@
-package org.day14practice;
+package org.linkedlist;
 
 //main class for operation
 public class LinkedListMain {

@@ -1,4 +1,4 @@
-package org.day14practice;
+package org.linkedlist;
 
 public class Node {
     // creating a node class

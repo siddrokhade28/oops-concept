@@ -1,6 +1,4 @@
-package org.day14practice;
-
-import java.util.Collections;
+package org.linkedlist;
 
 public class LinkedListOperation {
     Node head, tail;
