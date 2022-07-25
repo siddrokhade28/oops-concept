@@ -1,4 +1,4 @@
-package org.day14practice;
+package org.stackandqueue;
 
 public class Node {
     // creating a node class
