@@ -1,4 +1,4 @@
-package org.stack;
+package org.stackandqueue;
 
 public class StackOperation {
     Node head;

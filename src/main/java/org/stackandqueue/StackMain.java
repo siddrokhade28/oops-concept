@@ -1,4 +1,4 @@
-package org.stack;
+package org.stackandqueue;
 /*
 main class to carry out the stack operations
  */
@@ -10,5 +10,11 @@ public class StackMain {
         operation.push(56);
         operation.displayData();
         operation.peak();
+
+        QueueOperation queue = new QueueOperation();
+        queue.add(56);
+        queue.add(30);
+        queue.add(70);
+        queue.print();
     }
 }
