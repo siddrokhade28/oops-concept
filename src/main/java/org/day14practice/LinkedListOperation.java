@@ -87,4 +87,25 @@ public class LinkedListOperation {
 
         return index;
     }
+    // function to delete a Data anywhere in the list
+    public void delete(Object data){
+        Node temp =head;
+        Node prev = head;
+        if(head.getData().equals(data)){
+            head= head.getNext();
+        }
+        else {
+            temp= temp.getNext();
+
+            while (temp!= null){
+                if(temp.getData().equals(data)){
+                    prev.setNext(temp.getNext());
+                    break;
+                }
+                prev =temp;
+                temp=temp.getNext();
+            }
+        }
+
+    }
 }

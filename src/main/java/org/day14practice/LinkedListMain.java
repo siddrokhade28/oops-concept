@@ -16,10 +16,16 @@ public class LinkedListMain {
         operation.add(70);
         operation.add(30);
         operation.add(56);
+        operation.add(38);
+        operation.add(73);
+        operation.add(98);
         operation.showData();
-        System.out.println( operation.search(30));
-        System.out.println( operation.search(70));
-        System.out.println( operation.search(56));
+        operation.delete(98);
+        System.out.println();
+        operation.showData();
+//        System.out.println( operation.search(30));
+//        System.out.println( operation.search(70));
+//        System.out.println( operation.search(56));
 
     }
 
