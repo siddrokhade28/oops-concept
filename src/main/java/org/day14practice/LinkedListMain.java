@@ -14,21 +14,12 @@ public class LinkedListMain {
 //        System.out.println("popped value is "+ operation.pop());
 //        operation.showData();
         operation.add(70);
+        operation.add(30);
         operation.add(56);
         operation.showData();
-        operation.insert(56,30);
-        System.out.println();
-        operation.insert(30,86);
-        System.out.println();
-        operation.showData();
-        System.out.println();
-        operation.pop();
-        operation.pop();
-        operation.pop();
-        operation.pop();
-
-        operation.showData();
-        System.out.println();
+        System.out.println( operation.search(30));
+        System.out.println( operation.search(70));
+        System.out.println( operation.search(56));
 
     }
 
