@@ -16,5 +16,8 @@ public class StackMain {
         queue.add(30);
         queue.add(70);
         queue.print();
+        System.out.println();
+        System.out.println(queue.deQueue());
+        queue.print();
     }
 }

@@ -28,5 +28,11 @@ public class QueueOperation {
             temp = temp.getNext();
         }
     }
+    // fuction to de-queue
+    public Object deQueue() {
+        Object value = head.getData();
+        head = head.getNext();
+        return value;
+    }
 }
 
