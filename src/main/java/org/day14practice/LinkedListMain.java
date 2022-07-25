@@ -21,6 +21,14 @@ public class LinkedListMain {
         operation.insert(30,86);
         System.out.println();
         operation.showData();
+        System.out.println();
+        operation.pop();
+        operation.pop();
+        operation.pop();
+        operation.pop();
+
+        operation.showData();
+        System.out.println();
 
     }
 

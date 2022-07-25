@@ -41,16 +41,17 @@ public class LinkedListOperation {
             temp= temp.getNext();
         }
     }
-//    public Object pop(){
-//        //Node temp = head;
-//        if(head==null){
-//            System.out.println("List is empty");
-//        }
-//        else {
-//            Object value = head.getData();
-//            head=head.getNext();
-//            return value;
-//        }
-//        return null;
-//    }
+    // function to delete the data
+    public Object pop(){
+        //Node temp = head;
+        if(head==null){
+            System.out.println("List is empty");
+        }
+        else {
+            Object value = head.getData();
+            head=head.getNext();
+            return value;
+        }
+        return null;
+    }
 }
