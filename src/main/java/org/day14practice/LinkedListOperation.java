@@ -62,7 +62,7 @@ public class LinkedListOperation {
     public void popLast() {
         Node temp = head;
         Node prev = head;
-        if (head.getNext()==null) {
+        if (head.getNext() == null) {
             head = null;
         } else {
             temp = temp.getNext();
@@ -112,6 +112,22 @@ public class LinkedListOperation {
                 temp = temp.getNext();
             }
         }
-
+    }
+    // function to append the data at last
+    public void append( Object data){
+        Node  node = new Node(data);
+        Node temp =head;
+        if(head.getNext()==null){
+            head.setNext(node);
+        }
+        else {
+            while (temp!=null){
+                if(temp.getNext()==null){
+                    temp.setNext(node);
+                    break;
+                }
+                temp=temp.getNext();
+            }
+        }
     }
 }
