@@ -10,10 +10,33 @@ public class LinkedListOperation {
             head = node;
             tail = node;
         } else {
+
             node.setNext(head);
             head = node;
         }
     }
+
+
+    // function to add in sorted order
+//    public void addSorted(Object data) {
+//        Node node = new Node(data);
+//        if (head == null) {
+//            head = node;
+//        } else {
+//            Node temp = head;
+//            while (temp != null) {
+//               Node index = temp.getNext();
+//                    if ((int)temp.getData()>(int)data) {
+//                       head=node;
+//                       head.setNext(temp);
+//                       break;
+//                    }
+//                temp = temp.getNext();
+//            }
+//
+//        }
+//
+//    }
 
     // Function used to display all the object sof List
     public void showData() {
@@ -111,20 +134,20 @@ public class LinkedListOperation {
             }
         }
     }
+
     // function to append the data at last
-    public void append( Object data){
-        Node  node = new Node(data);
-        Node temp =head;
-        if(head.getNext()==null){
-            head.setNext(node);
-        }
-        else {
-            while (temp!=null){
-                if(temp.getNext()==null){
+    public void append(Object data) {
+        Node node = new Node(data);
+        Node temp = head;
+        if (head == null) {
+            head = node;
+        } else {
+            while (temp != null) {
+                if (temp.getNext() == null) {
                     temp.setNext(node);
                     break;
                 }
-                temp=temp.getNext();
+                temp = temp.getNext();
             }
         }
     }
