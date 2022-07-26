@@ -19,10 +19,6 @@ public class LinkedListMain {
        operation.add(56);
        operation.showData();
        System.out.println("----------------------");
-       operation.addSorted(30);
-       operation.addSorted(56);
-       operation.addSorted(70);
-       operation.showData();
        System.out.println("popped value is " + operation.pop());
        operation.showData();
        System.out.println("----------------------");
