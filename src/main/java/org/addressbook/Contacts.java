@@ -3,9 +3,9 @@ package org.addressbook;
 public class Contacts {
     private String firstName;
     private String lastName;
-    private  String address;
-    private  String city;
-    private  String state;
+    private String address;
+    private String city;
+    private String state;
     private int zip;
     private long phoNum;
     private String email;
@@ -90,15 +90,6 @@ public class Contacts {
 
     @Override
     public String toString() {
-        return "Contacts{" +
-                "firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", address='" + address + '\'' +
-                ", city='" + city + '\'' +
-                ", state='" + state + '\'' +
-                ", zip=" + zip +
-                ", phoNum=" + phoNum +
-                ", email='" + email + '\'' +
-                '}'+"\n";
+        return "Contacts{" + "firstName='" + firstName + '\'' + ", lastName='" + lastName + '\'' + ", address='" + address + '\'' + ", city='" + city + '\'' + ", state='" + state + '\'' + ", zip=" + zip + ", phoNum=" + phoNum + ", email='" + email + '\'' + '}' + "\n";
     }
 }
