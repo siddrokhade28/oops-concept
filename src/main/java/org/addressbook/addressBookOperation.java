@@ -5,8 +5,9 @@ import java.util.Scanner;
 
 public class addressBookOperation implements addressBook {
     ArrayList<Contacts> contactList = new ArrayList();
-    Contacts contacts=new Contacts();
+    Contacts contacts = new Contacts();
     Scanner sc = new Scanner(System.in);
+
     //to set the contacts and storing them in ArrayList
     @Override
     public void addContact() {
@@ -26,18 +27,19 @@ public class addressBookOperation implements addressBook {
         long phNo = sc.nextLong();
         System.out.println("Enter email");
         String email = sc.next();
-        Contacts contacts = new Contacts(firstName,lastName,address,city,state,zip,phNo,email);
+        Contacts contacts = new Contacts(firstName, lastName, address, city, state, zip, phNo, email);
         contactList.add(contacts);
 
         System.out.println(contactList);
     }
-//to Edit a contct by name
+
+    //to Edit a contct by name
     @Override
     public void editContact(String firstName) {
-        boolean flag= false;
-        for(Contacts contact : contactList){
-            if(contact.getFirstName().equals(firstName)){
-                flag= true;
+        boolean flag = false;
+        for (Contacts contact : contactList) {
+            if (contact.getFirstName().equals(firstName)) {
+                flag = true;
                 System.out.println("Enter the Number for following changes:");
                 System.out.println("Enter 1 to Change First Name");
                 System.out.println("Enter 2 to change Last Name");
@@ -47,8 +49,8 @@ public class addressBookOperation implements addressBook {
                 System.out.println("Enter 6 to change Zip");
                 System.out.println("Enter 7 to change Phone Number");
                 System.out.println("Enter 8 to change Email");
-                int ch= sc.nextInt();
-                switch (ch){
+                int ch = sc.nextInt();
+                switch (ch) {
                     case 1:
                         System.out.println("Enter the new First Name");
                         contact.setFirstName(sc.next());
@@ -90,16 +92,17 @@ public class addressBookOperation implements addressBook {
                 break;
             }
         }
-        if(flag==false){
+        if (flag == false) {
             System.out.println("Contact not present in the book");
         }
         //System.out.println(contactList);
     }
-//to delete a contact by name
+
+    //to delete a contact by name
     @Override
     public void deleteContact(String firstname) {
-        boolean flag= false;
-        for(Contacts contact : contactList) {
+        boolean flag = false;
+        for (Contacts contact : contactList) {
             if (contact.getFirstName().equals(firstname)) {
                 flag = true;
                 contactList.remove(contact);
@@ -107,14 +110,16 @@ public class addressBookOperation implements addressBook {
                 break;
             }
         }
-        if(flag==false){
+        if (flag == false) {
             System.out.println("Contact not present in the book");
         }
 
     }
-//to display all contacts
+
+    //to display all contacts
     @Override
     public void daiplayAll() {
         System.out.println(contactList);
     }
 }
+
