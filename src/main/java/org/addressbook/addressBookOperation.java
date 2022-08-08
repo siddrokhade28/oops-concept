@@ -1,11 +1,12 @@
 package org.addressbook;
 
-import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.*;
 
 public class addressBookOperation implements addressBook {
-    ArrayList<Contacts> contactList = new ArrayList();
+
     Contacts contacts = new Contacts();
+    ArrayList<Contacts> contactList = new ArrayList();
+    //List<Contacts> a = new ArrayList<>();
     Scanner sc = new Scanner(System.in);
 
     //to set the contacts and storing them in ArrayList
@@ -29,14 +30,13 @@ public class addressBookOperation implements addressBook {
         String email = sc.next();
         Contacts contacts = new Contacts(firstName, lastName, address, city, state, zip, phNo, email);
         contactList.add(contacts);
-
-        System.out.println(contactList);
     }
 
     //to Edit a contct by name
     @Override
     public void editContact(String firstName) {
         boolean flag = false;
+        Contacts contacts = new Contacts();
         for (Contacts contact : contactList) {
             if (contact.getFirstName().equals(firstName)) {
                 flag = true;
@@ -121,5 +121,13 @@ public class addressBookOperation implements addressBook {
     public void daiplayAll() {
         System.out.println(contactList);
     }
+
+    @Override
+    public List<Contacts> retrunContactList() {
+        return contactList;
+    }
+
 }
+
+
 

@@ -1,9 +1,14 @@
 package org.addressbook;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 import java.util.Scanner;
 
 public class AddessBookApp {
-    public static void main(String[] args) {
+    public List<Contacts> addBook() {
+        boolean exit = false;
+        List<Contacts> bookDetails = new ArrayList<>();
         Scanner sc = new Scanner(System.in);
         addressBook operations = new addressBookOperation();
         while (true) {
@@ -32,9 +37,14 @@ public class AddessBookApp {
                     operations.daiplayAll();
                     break;
                 default:
-                    System.exit(0);
-                    break;
+                    exit = true;
             }
+            bookDetails = operations.retrunContactList();
+            if (exit == true) {
+                break;
+            }
+
         }
+        return bookDetails;
     }
 }

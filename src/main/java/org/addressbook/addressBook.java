@@ -1,5 +1,7 @@
 package org.addressbook;
 
+import java.util.List;
+
 public interface addressBook {
     void addContact();
 
@@ -8,4 +10,5 @@ public interface addressBook {
     void deleteContact(String firstname);
 
     void daiplayAll();
+    List<Contacts> retrunContactList();
 }
